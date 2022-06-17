@@ -4,7 +4,7 @@
 
 - [x] VGGNet-13/16/19
 - [x] EfficientNet系列；
-- [x] ResNeSt系列;
+- [x] ResNet系列;
 
 ```
 
