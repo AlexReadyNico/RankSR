@@ -1,8 +1,5 @@
 # RankSR
 
-功能说明：
-使用`demos/image_assessment.py`进行部署调用；
-
 可用的骨干网络包括：
 
 - [x] VGGNet-13/16/19
