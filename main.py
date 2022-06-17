@@ -108,6 +108,14 @@ def main_worker(gpu, args):
     #model = EfficientNet.from_pretrained('efficientnet-b7')
     feature = model._fc.in_features
     model._fc = nn.Linear(in_features = feature, out_features = 1)
+    #----------------------------ResNet------------------------#
+    #model = models.resnet18(pretrained=True)
+    #model = models.resnet34(pretrained=True)
+    #model = models.resnet50(pretrained=True)
+    #model = models.resnet101(pretrained=True)
+    #增加一个全连接层1000-->1维输出
+    #model.fc = nn.Linear(model.fc.in_features, 1)
+    #----------------------------ResNet------------------------#
 
 
     # 重加载之前训练好的模型
