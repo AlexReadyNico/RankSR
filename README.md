@@ -1,13 +1,11 @@
-# 基于PyTorch实现的RankSR
+# RankSR
 
 功能说明：
 使用`demos/image_assessment.py`进行部署调用；
 
-
 可用的骨干网络包括：
 
-- [x] PyTorch自带的网络：resnet, shufflenet, densenet, mobilenet, mnasnet等；
-- [x] MobileNet v3；
+- [x] VGGNet-13/16/19
 - [x] EfficientNet系列；
 - [x] ResNeSt系列;
 
@@ -15,9 +13,6 @@
 
 ### 模型训练
 
-基于`data/`目录下的`train`数据集，使用分支数为`1`、输入图像分辨率`244x224`、损失函数为排序对比损失ranking loss（+ margin=0.1） 
-的`efficientnet-b0`网络，同时加载预训练模型、训练学习率warmup 5个epoch，batch size为384，
-数据加载worker为16个，训练65个epoch：
 
 ```shell
 python main.py --data data/ --train --arch efficientnet_b0 --num_classes 1 \
